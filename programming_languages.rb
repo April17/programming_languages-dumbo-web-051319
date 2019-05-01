@@ -5,7 +5,7 @@ def reformat_languages(languages)
   languages.collect do |sty, langs|
     langs.each do |lang, typ|
       languagesBytype[lang] = typ
-      languagesBytype[lang][:style] << sty
+      languagesBytype[lang][:style] = []
     end
   end
   languages.collect do |sty, langs|
