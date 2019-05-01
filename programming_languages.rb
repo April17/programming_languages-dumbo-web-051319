@@ -10,6 +10,11 @@ def reformat_languages(languages)
       languagesBytype[lang][:style] << sty
     end
   end
+  languages.collect do |sty, langs|
+    langs.each do |lang, typ|
+      languagesBytype[lang][:style] << sty
+    end
+  end
   return languagesBytype
 end
 #first run take all the languages and push into languagesBytype
